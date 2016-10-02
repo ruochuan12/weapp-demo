@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+   <view wx:for="{{items}}">
+    <text class="user-motto" wx:if="{{showHello}}">{{motto}}-{{index}}</text>
+    </view>
+    <button type="primary" bindtap="btnClick">{{btnText}}</button>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#455A64",
+    "navigationBarTitleText": "轩辕Rowboat的小程序",
+    "navigationBarTextStyle":"white"
+  }
+}
