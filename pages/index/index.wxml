@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <image wx:if="{{imageUrl!=null}}" class="userinfo-avatar" src="{{imageUrl}}" background-size="cover"></image>
+    <image wx:else class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
@@ -9,5 +10,13 @@
     <text class="user-motto" wx:if="{{showHello}}">{{motto}}-{{index}}</text>
     </view>
     <button type="primary" bindtap="btnClick">{{btnText}}</button>
+    <button type="primary" bindtap="chooseImage">更换头像</button>
+  </view>
+  <view>
+    <include src="../template/footer"/>
+    <import src="../template/t1"/>
+    <template is="t1"/>
+    <template is="t2"/>
+    <template is="t3"/>
   </view>
 </view>
